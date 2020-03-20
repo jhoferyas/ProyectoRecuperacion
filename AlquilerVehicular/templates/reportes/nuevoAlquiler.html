@@ -1,0 +1,106 @@
+
+
+<form action="/guardarProducto" class="form-horizontal" method="POST" enctype="multipart/form-data">
+					<h3 class="text-info">Busca la categoría donde verán tu anuncio</h3>
+					<div class="form-inline">
+						<div class="col-sm-3 control-label">
+							<label>¿Qué anuncias?</label>
+						</div>
+						<div class="col-sm-7">
+							<div class="form-group">
+								
+								<select class="form-control" id="categoria" name="categoria" required="">
+									<option>Seleccione una categoría</option>
+									
+									<option value="{{categoria.id}}">{{categoria.categoria }}</option>
+									
+								</select>
+
+							</div>
+							<!--<button class="btn btn-default">Buscar categoría</button>-->
+						</div>
+					</div>
+					<br><br>
+					<div class="form-inline">
+						<div class="col-sm-3 control-label">
+							<label>Selecciona una Subcategoria</label>
+						</div>
+						<div class="col-sm-7">
+							<div class="form-group">
+			
+								<select class="form-control" id="subcategoria" name="subcategoria" required="">
+									<option>Seleccione una subcategoría</option>
+								</select>
+
+							</div>
+							<!--<button class="btn btn-default">Buscar categoría</button>-->
+						</div>
+					</div>
+					<br><br>
+					<h3 class="text-info">Detalles de tu anuncio</h3>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Marca</label>
+						<div class="col-sm-7">
+							<input type="text" class="form-control" placeholder="Titulo del Anuncio" name="marca"
+								required="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Nombre</label>
+						<div class="col-sm-7">
+							<input type="text" class="form-control" placeholder="Titulo del Anuncio" name="nombre"
+								required="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Ubicacion</label>
+						<div class="col-sm-7">
+							<input type="text" class="form-control" placeholder="Ubicacion del Producto"
+								name="ubicacion" required="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Descripción</label>
+						<div class="col-sm-7">
+							<textarea class="form-control" rows="4" placeholder="Descripción" name="desc"
+								required=""></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Precio</label>
+						<div class="col-sm-7">
+							<input type="number" class="form-control" placeholder="Precio" name="precio" required="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">En que condicion esta el Producto ?</label>
+						<div class="col-sm-7">
+							<select class="form-control" name="condicion" required="">
+								<option>Excelente</option>
+								<option>Bueno</option>
+								<option>Regular</option>
+								<option>Malo</option>
+							</select>
+						</div>
+					</div>
+					<br><br>
+					<h3 class="text-info">Foto</h3>
+					<p><b>!HEY¡</b>¡los anuncios con fotos reciben 7 veces más contactos!</p>
+					<div class="form-group">
+						<div class="custom-input-file">
+							<input type="file" size="1" class="input-file" accept="image/png, image/jpeg" name="archivo"
+								multiple required="" />
+							<i class="fa fa-picture-o" aria-hidden="true"></i>
+						</div>
+						<br>
+						<p class="text-muted text-center archivo">Archivo...</p>
+					</div>
+					<br><br>
+					<p class="text-center">
+						Al publicar un anuncio, aceptas las <a href="#!">condiciones de uso y la Política de
+							Privacidad</a>
+					</p>
+					<p class="text-center">
+						<button type="submit" class="btn btn-success">Continuar</button>
+					</p>
+				</form>

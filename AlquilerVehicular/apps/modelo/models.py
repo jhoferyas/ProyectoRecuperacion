@@ -75,10 +75,12 @@ class Alquiler(models.Model):
     alquiler_id = models.AutoField(primary_key = True)
     nombre = models.CharField(max_length=20, null = False)
     Apellido = models.CharField(max_length=20, null = False)
-    vehiculo = models.CharField(max_length=20, null = False)
+    placa_vehiculo = models.CharField(max_length=20, null = False)
+    marca = models.CharField(max_length=15, null = False)
     color = models.CharField(max_length=20, null = False)
     fechaInicio = models.DateField(auto_now = False, auto_now_add = False, null = False)
     fechaFin = models.DateField(auto_now = False, auto_now_add = False, null = False)  
+    precio = models.DecimalField(max_digits=10, decimal_places=2, null= False)
     Vehiculo = models.ForeignKey(
         'vehiculo',
         on_delete = models.CASCADE,
@@ -90,7 +92,8 @@ class Alquiler(models.Model):
         'cliente',
         on_delete = models.CASCADE,
         )
-    def _str_(self):
+
+    def _str(self):
         string=str(self.nombre)+";"+str(self.alquiler_id)    
     
 

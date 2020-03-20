@@ -58,7 +58,7 @@ body {
 
 li {
   padding-left: 10px;
-  font-size: 18px;
+  font-size: 1px;
   display: inline;
   text-align: left;
   text-transform: uppercase;
@@ -165,7 +165,7 @@ li {
 }
 #scroll{
   border:1px solid;
-  height:440px;
+  height:510px;
   width:415px;
   overflow-y:scroll;
   overflow-x:hidden;
@@ -203,7 +203,7 @@ label {
   font-size: 13px;
   padding-left: 15px;
   padding-bottom: 10px;
-  color:rgba(255,255,255,.2);
+  color:#ffffff;
   display: block;
 }
 
