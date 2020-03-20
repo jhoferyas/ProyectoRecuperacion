@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reportes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Template by FreeHTML5.co" />
+    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+    <meta name="author" content="FreeHTML5.co" />
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.css">
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
+
+</head>
+
+<body style="background-image: url(http://www.laketravelcompany.com.ar/2019/wp-content/uploads/2018/02/Fondo-Web-b.jpg)">
+    <header role="banner" id="fh5co-header">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="navbar-header">
+                        <!-- Mobile Toggle Menu Button -->
+                        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse"
+                            data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                        <a class="navbar-brand" href="index.html">REN-A-CAR</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/modelo" data-nav-section="home"><span>Principal</span></a></li>
+                            <li class="active"><a href="{% url 'alquiler'%}" data-nav-section="explore"><span>Reportes</span></a></li>
+                            <li><a href="{% url 'cerrar_sesion'%}" data-nav-section="services"><span>Cerrar Sesion</span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <div>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        
+
+        <h1 style="text-align: center">Lista de Alquileres Realizados</h1>
+        <div style="float: left" style="width: 100%"></div>
+        <table class="table">
+            <thead class="table-dark">
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Placa Vehiculo</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Color</th>
+                <th scope="col">Fecha de Inicio</th>
+                <th scope="col">Fecha Final</th>
+                <th scope="col">Precio</th>
+            </thead>
+
+            {% for c in listaal %}
+                <tr>
+                    <td>{{c.nombre}}</td>
+                    <td>{{c.Apellido}}</td>
+                    <td>{{c.placa_vehiculo}}</td>
+                    <td>{{c.marca}}</td>
+                    <td>{{c.color}}</td>
+                    <td>{{c.fechaInicio}}</td>
+                    <td>{{c.fechaFin}}</td>
+                    <td>{{c.precio}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        </div>
+    </div>    
+</body>
+
+</html>

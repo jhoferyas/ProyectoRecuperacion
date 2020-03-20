@@ -78,8 +78,8 @@ class Alquiler(models.Model):
     placa_vehiculo = models.CharField(max_length=20, null = False)
     marca = models.CharField(max_length=15, null = False)
     color = models.CharField(max_length=20, null = False)
-    fechaInicio = models.DateField(auto_now = False, auto_now_add = False, null = False)
-    fechaFin = models.DateField(auto_now = False, auto_now_add = False, null = False)  
+    fechaInicio = models.CharField(max_length=20, null = False)
+    fechaFin = models.CharField(max_length=20, null = False)
     precio = models.DecimalField(max_digits=10, decimal_places=2, null= False)
     Vehiculo = models.ForeignKey(
         'vehiculo',

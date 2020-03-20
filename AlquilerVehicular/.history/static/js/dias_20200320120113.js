@@ -1,0 +1,4 @@
+$(document).ready(function() {
+    var a = $("#fechaini").val();
+    console.log("Maldito inutil " + a);
+});

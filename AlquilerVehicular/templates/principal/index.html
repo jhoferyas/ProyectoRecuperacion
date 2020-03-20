@@ -60,6 +60,13 @@
     <section id="fh5co-home" data-section="home"
         style="background-image: url(https://lh3.googleusercontent.com/proxy/sfDKhLwrwfPGF5O1PDRZqyh3nyP74x_QTYBIKxW53Ukvbmh_-7-x0i7K-gWEIFCQYlF465QgivAQY_49dPt1ppJY51hcOPkB5euFZcbuD_FtImOsg8GMOpYXeMHjAEE);"
         data-stellar-background-ratio="0.5">
+         {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
         <div class="gradient"></div>
         <div class="container">
             <div class="text-wrap">
