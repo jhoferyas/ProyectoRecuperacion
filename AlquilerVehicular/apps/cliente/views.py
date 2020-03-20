@@ -73,9 +73,7 @@ def principalCliente(request):
 
 def nuevoalquiler(request):
     listave = Vehiculo.objects.all()
-    context = {
-        'listave': listave,
-    }
+    
         
 
     return render(request, "reportes/nuevoAlquiler.html",context)    
