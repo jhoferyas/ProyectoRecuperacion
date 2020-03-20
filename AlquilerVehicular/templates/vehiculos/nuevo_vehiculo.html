@@ -1,38 +1,66 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+
+<html class="no-js">
 
 <head>
-    <title>Agregar Vehiculo</title>
-    <link rel="stylesheet" type="text/css" href="../../static/css/login.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clientes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Template by FreeHTML5.co" />
+    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+    <meta name="author" content="FreeHTML5.co" />
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.css">
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
+
 </head>
 
-<body>
-        <div class="container" style="background-image: url(https://thumbs.dreamstime.com/z/escritorio-m%C3%A9dico-del-verde-del-fondo-de-las-p%C3%ADldoras-de-la-ampolla-20890437.jpg)">
-            <div class="frame">
-                
-                <ul class="links">
-                    <div class="signin-active"><a  href="/principal/compras" class="btn btn-danger">Regresar</a></div>
-                </ul>
-    
-                <form class="form-signin" action="" method="POST" name="form" id="scroll"> {% csrf_token %}
-                    <h1>Ingrese Datos de Compra</h1>
-                    <label for="username">{{fc.as_p}}</label>
-                    <label for="username">{{f.as_p}}</label>                        
-                    <button type="submit" value="Guardar"> Guardar</button>
-                </form>
-
-    
+<body style="background-image: url(http://www.laketravelcompany.com.ar/2019/wp-content/uploads/2018/02/Fondo-Web-b.jpg)">
+    <header role="banner" id="fh5co-header">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="navbar-header">
+                        <!-- Mobile Toggle Menu Button -->
+                        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse"
+                            data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                        <a class="navbar-brand" href="index.html">REN-A-CAR</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/modelo" data-nav-section="home"><span>Principal</span></a></li>
+                            <li><a href="{% url 'vehiculo'%}" data-nav-section="explore"><span>Vehiculos</span></a></li>
+                            <li><a href="{% url 'clientes'%}" data-nav-section="explore"><span>Clientes</span></a></li>
+                            <li class="active"><a href="principal/ventas" data-nav-section="explore"><span>Nuevo Alquiler</span></a></li>
+                            <li><a href="{% url 'cerrar_sesion'%}" data-nav-section="services"><span>Cerrar Sesion</span></a></li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
-    
         </div>
-        
-        <form method="POST"> 
-           
-            
-            
+    </header>
+    <br>
+    <br>
+    <br>
+    <div>
+    <center>
+        <form class="form-signin" action="" method="POST" name="form" id="scroll"> {% csrf_token %}
+            <h1>Ingrese Datos del Vehiculo</h1>
+            <label for="username">{{fc.as_p}}</label>
+            <label for="username">{{f.as_p}}</label>        
+            <br>                
+            <button type="submit" class="btn btn-success">Guardar</button>
         </form>
+    </center>    
+    </div>    
 </body>
 
 </html>
+
+
+                
+

@@ -13,7 +13,11 @@ def index (request):
 
    elif usuario.groups.filter(name = 'empleado').exists():
       print(usuario)
-      return render(request,'principal/index.html')   
+      return render(request,'principal/index.html')
+
+   elif usuario.groups.filter(name = 'gerente').exists():
+      print(usuario)
+      return render(request,'principal/principalgerente.html')      
 
    print("HOLI")
    messages.info(request, 'Inicie Sesion Primero')

@@ -34,8 +34,8 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="/modelo" data-nav-section="home"><span>Principal</span></a></li>
                             <li><a href="{% url 'vehiculo'%}" data-nav-section="explore"><span>Vehiculos</span></a></li>
-                            <li class="active"><a href="principal/compras" data-nav-section="explore"><span>Clientes</span></a></li>
-                            <li><a href="principal/ventas" data-nav-section="explore"><span>Nuevo Alquiler</span></a></li>
+                            <li><a href="{% url 'clientes'%}" data-nav-section="explore"><span>Clientes</span></a></li>
+                            <li><a href="{% url 'alquiler'%}" data-nav-section="explore"><span>Nuevo Alquiler</span></a></li>
                             <li><a href="{% url 'cerrar_sesion'%}" data-nav-section="services"><span>Cerrar Sesion</span></a></li>
                         </ul>
                     </div>
