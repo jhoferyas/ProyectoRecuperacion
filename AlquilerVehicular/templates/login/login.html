@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/login.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="container" style="background-image: url(https://blogs.unsw.edu.au/nowideas/files/2017/05/abrir-una-farmacia-online.jpg)">
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <div{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+        <div class="frame">
+            <div class="nav">
+                <ul class="links">
+                    <center>
+                    <div class="signin-active"><a class="btn">Inicio De Sesion</a></div>
+                    </center>
+                </ul>
+            </div>
+            <div ng-app ng-init="checked = false">
+            <center>
+                <form class="form-signin" method="POST"> {% csrf_token %}
+                     <label>{{formulario.as_p}}</label>                     
+                  
+                       
+                        <button type="submit" class="btn-animate" value="Guardar"> INICIAR SESSION</button>
+             
+                </form>
+            </center>    
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

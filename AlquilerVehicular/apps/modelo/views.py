@@ -1,3 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse
+from django.contrib import messages
+from django.http import HttpResponseRedirect, HttpResponse
+from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+
+def index (request):
+   usuario = request.user
+   if usuario.groups.filter(name = 'Administrador').exists():
+      print(usuario)
+      return render(request,'principal/index.html')   
+
+   elif usuario.groups.filter(name = 'empleado').exists():
+      print(usuario)
+      return render(request,'principal/index.html')   
+
+   print("HOLI")
+   messages.info(request, 'Inicie Sesion Primero')
+   return HttpResponseRedirect (reverse('login'))

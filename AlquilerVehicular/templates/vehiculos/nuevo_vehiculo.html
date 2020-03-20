@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Agregar Vehiculo</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/login.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+        <div class="container" style="background-image: url(https://thumbs.dreamstime.com/z/escritorio-m%C3%A9dico-del-verde-del-fondo-de-las-p%C3%ADldoras-de-la-ampolla-20890437.jpg)">
+            <div class="frame">
+                
+                <ul class="links">
+                    <div class="signin-active"><a  href="/principal/compras" class="btn btn-danger">Regresar</a></div>
+                </ul>
+    
+                <form class="form-signin" action="" method="POST" name="form" id="scroll"> {% csrf_token %}
+                    <h1>Ingrese Datos de Compra</h1>
+                    <label for="username">{{fc.as_p}}</label>
+                    <label for="username">{{f.as_p}}</label>                        
+                    <button type="submit" value="Guardar"> Guardar</button>
+                </form>
+
+    
+            </div>
+    
+        </div>
+        
+        <form method="POST"> 
+           
+            
+            
+        </form>
+</body>
+
+</html>
