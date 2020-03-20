@@ -58,7 +58,10 @@
         <table class="table">
             <thead class="table-dark">
                 <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
                 <th scope="col">Placa Vehiculo</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Color</th>
                 <th scope="col">Fecha de Inicio</th>
                 <th scope="col">Fecha Final</th>
                 <th scope="col">Precio</th>
@@ -67,7 +70,10 @@
             {% for c in listaal %}
                 <tr>
                     <td>{{c.nombre}}</td>
+                    <td>{{c.Apellido}}</td>
                     <td>{{c.placa_vehiculo}}</td>
+                    <td>{{c.marca}}</td>
+                    <td>{{c.color}}</td>
                     <td>{{c.fechaInicio}}</td>
                     <td>{{c.fechaFin}}</td>
                     <td>{{c.precio}}</td>

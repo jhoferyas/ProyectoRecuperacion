@@ -54,7 +54,7 @@
             {% endfor %}
         </ul>
         {% endif %}
-        <form action="{% url 'alquiler'%}" class="form-horizontal" method="POST" enctype="multipart/form-data">{%csrf_token%}
+        <form action="/guardarProducto" class="form-horizontal" method="POST" enctype="multipart/form-data">
             <br>
             <center>
                 <h3 class="text-info">Registro De Nuevo Alquiler</h3>

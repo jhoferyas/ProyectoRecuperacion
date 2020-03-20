@@ -92,16 +92,16 @@ def nuevoalquiler(request):
         return render(request, "vehiculos/principal_vehiculos.html")   
 
     elif usuario.groups.filter(name = 'empleado').exists():
-        #alquiler = Alquiler() #creo objeto en la clase cuenta
-        #alquiler.nombre = request.POST.get('#nombre')
-        #alquiler.placa_vehiculo = request.POST.get('#placa')
-        #alquiler.fechaInicio = request.POST.get('#fechaini')
-        #alquiler.fechaFin = request.POST.get('#fechafin')
-        #alquiler.precio = request.POST.get('#precio')
-        #alquiler.Cliente_id = alquiler.alquiler_id
-        #alquiler.Vehiculo_id = alquiler.alquiler_id
-        #alquiler.save()
-        #messages.info(request, 'Registrado Exitosamente!!')
+        alquiler = Alquiler() #creo objeto en la clase cuenta
+        alquiler.nombre = request.POST.get('nombre')
+        alquiler.placa_vehiculo = request.POST.get('placa')
+        alquiler.fechaInicio = request.POST.get('fechaini')
+        alquiler.fechaFin = request.POST.get('fechafin')
+        alquiler.precio = request.POST.get('precio')
+        alquiler.Cliente_id = alquiler.alquiler_id
+        alquiler.Vehiculo_id = alquiler.alquiler_id
+        alquiler.save()
+        messages.info(request, 'Registrado Exitosamente!!')
         return render(request, "reportes/nuevoAlquiler.html")    
 
     messages.info(request, 'El Administrador no puede realizar Alquileres')

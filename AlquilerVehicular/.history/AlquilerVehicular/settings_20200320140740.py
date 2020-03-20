@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'AlquilerVehicular.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mysql_cymysql',
-        'NAME': 'AlquilerDeVehiculos',
+        'NAME': 'AlquilerVehiculos',
         'USER': 'jhon',
         'PASSWORD': 'elrey123',
         'HOST': 'localhost',
